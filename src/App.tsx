@@ -1,5 +1,6 @@
 import React from 'react';
 import Child from './components/Child';
+import Images from './components/Images';
 
 class App extends React.Component{
 
@@ -11,6 +12,7 @@ class App extends React.Component{
     return (
       <div>
         <Child name="Mamu" age={123}/>
+        <Images />
       </div>
     );
   }

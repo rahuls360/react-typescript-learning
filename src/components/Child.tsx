@@ -1,12 +1,31 @@
 import React from 'react';
-import User from '../Interfaces';
+import { Lifter, Developer} from '../Interfaces';
 
-class Child extends React.Component<User, {}> {
+class Child extends React.Component<Lifter, {}> {
+
+  getDeveloperDetails = () => {
+    const details: Developer = {
+      name: "Rahul",
+      stack: ["React", "JSON"],
+      details: {
+        exercise: true
+      }
+    }
+    return (
+      <>
+        <p>{details.name}</p>
+        <p>{details.stack}</p>
+      </>
+    );
+  }
 
   render() {
     const { name, age } = this.props
     return (
-      <h1>hello {name}. I know that you are {age} years old</h1>
+      <>
+        <h1>hello {name}. I know that you are {age} years old</h1>
+        {this.getDeveloperDetails()}
+      </>
     );
   }
 }
