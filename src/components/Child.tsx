@@ -14,7 +14,7 @@ class Child extends React.Component<Lifter, {}> {
     return (
       <>
         <p>{details.name}</p>
-        <p>{details.stack}</p>
+        <p>{details.stack.join(", ")}</p>
       </>
     );
   }
